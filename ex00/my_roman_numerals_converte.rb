@@ -1,20 +1,3 @@
-def my_roman_numerals_converter(number)
-    num_lenght = number.to_s.length #calculate the length of number
-    roman = ''
-    case num_lenght
-    when 1  #if length is 1
-        roman = roman_unit(number) #call a helper method to return it's roman equivalent
-    when 2  #if length is 2
-        roman = roman_tens(number) #call a helper method to return it's roman equivalent
-    when 3  #if length is 3 
-        roman = roman_hundred(number) #call a helper method to return it's roman equivalent
-    when 4  #if length is 4
-        roman = roman_thousand(number) #call a helper method to return it's roman equivalent
-    else #if length is grather than 4
-        roman = "Invliad number, please enter number from 1 - 3000" #return an invalid message
-    end
-    return roman
-end
 #Helper method to return roman equivalent of numbers with 1 digit
 def roman_unit(num)
     unit = ''
@@ -87,4 +70,22 @@ def roman_thousand(num)
     return thousand
 end
 
- #p roman_numerals(845)
+def my_roman_numerals_converter(number)
+    num_lenght = number.to_s.length #calculate the length of number
+    roman = ''
+    case num_lenght
+    when 1  #if length is 1
+        roman = roman_unit(number) #call a helper method to return it's roman equivalent
+    when 2  #if length is 2
+        roman = roman_tens(number) #call a helper method to return it's roman equivalent
+    when 3  #if length is 3 
+        roman = roman_hundred(number) #call a helper method to return it's roman equivalent
+    when 4  #if length is 4
+        roman = roman_thousand(number) #call a helper method to return it's roman equivalent
+    else #if length is grather than 4
+        roman = "Invliad number, please enter number from 1 - 3000" #return an invalid message
+    end
+    return roman
+end
+
+# p my_roman_numerals_converter(845)
