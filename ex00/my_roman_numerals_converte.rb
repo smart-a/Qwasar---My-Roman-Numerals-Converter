@@ -1,4 +1,4 @@
-def roman_numerals(number)
+def my_roman_numerals_converter(number)
     num_lenght = number.to_s.length #calculate the length of number
     roman = ''
     case num_lenght
